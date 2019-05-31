@@ -4,20 +4,47 @@
   "version": "0.1.0",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "gulp dev",
+    "dev": "cross-env NODE_ENV=development gulp dev",
     "build": "cross-env NODE_ENV=production gulp build",
-    "test": "echo test",
-    "prettier": "pretty-quick --staged"
+    "page": "gulp page",
+    "component": "gulp component",
+    "prettier": "pretty-quick --staged",
+    "test": "echo test"
   },
   "pre-commit": [
     "prettier"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "autoprefixer": "^9.5.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "fs-extra": "^8.0.1",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-env": "^0.4.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-json-minify": "^1.2.2",
+    "gulp-less": "^4.0.1",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0"
-  }
+    "pretty-quick": "^1.10.0",
+    "prompts": "^2.1.0",
+    "wx-px2rpx": "^1.2.2"
+  },
+  "dependencies": {}
 }
